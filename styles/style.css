@@ -1,0 +1,31 @@
+@import url('./font.css');
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    user-select: none;
+    overflow: hidden;
+}
+
+main {
+    color: white;
+    font-size: 10vw;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 2vw;
+    text-shadow: 0 0 12px orange ;
+    position: relative;
+}
+
+main::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: orange;
+    z-index: -1;
+    filter: blur(8px);
+}
